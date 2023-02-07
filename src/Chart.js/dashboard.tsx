@@ -10,6 +10,7 @@ import Main from './main';
 const Dashboard = () => {
     const over = useRef<HTMLUListElement>(null);
     const [isHoverList, setHoverList] = useState<number>(1);
+    const [isToggle, setToggle] = useState<Boolean>(false);
 
     const activeLink = (e: React.MouseEvent) => {
         const element = e.target as HTMLElement;
@@ -35,53 +36,52 @@ const Dashboard = () => {
         }
     }
     return (
-        <div
-            className="container">
-            <div className='navigation'>
+        <div className="container">
+            <div className={`navigation${isToggle ? " active" : ""}`}>
                 <ul ref={over} onMouseOver={(e) => activeLink(e)}>
-                    <li className={`navList ${isHoverList === 0 ? `hovered` : ``}`} >
+                    <li className={`navList${isHoverList === 0 ? ` hovered` : ``}`} >
                         <a href="#">
                             <span className="icon"><AiFillApple/></span>
                             <span className="title">Brand Name</span>
                         </a>
                     </li>
-                    <li className={`navList ${isHoverList === 1 ? `hovered` : ``}`}>
+                    <li className={`navList${isHoverList === 1 ? ` hovered` : ``}`}>
                         <a href="#">
                             <span className="icon"><AiOutlineHome/></span>
                             <span className="title">Dashboard</span>
                         </a>
                     </li>
-                    <li className={`navList ${isHoverList === 2 ? `hovered` : ``}`}>
+                    <li className={`navList${isHoverList === 2 ? ` hovered` : ``}`}>
                         <a href="#">
                             <span className="icon"><AiOutlineUser/></span>
                             <span className="title">Customers</span>
                         </a>
                     </li>
-                    <li className={`navList ${isHoverList === 3 ? `hovered` : ``}`}>
+                    <li className={`navList${isHoverList === 3 ? ` hovered` : ``}`}>
                         <a href="#">
                             <span className="icon"><BsChat/></span>
                             <span className="title">Message</span>
                         </a>
                     </li>
-                    <li className={`navList ${isHoverList === 4 ? `hovered` : ``}`}>
+                    <li className={`navList${isHoverList === 4 ? ` hovered` : ``}`}>
                         <a href="#">
                             <span className="icon"><IoMdHelp/></span>
                             <span className="title">Help</span>
                         </a>
                     </li>
-                    <li className={`navList ${isHoverList === 5 ? `hovered` : ``}`}>
+                    <li className={`navList${isHoverList === 5 ? ` hovered` : ``}`}>
                         <a href="#">
                             <span className="icon"><AiOutlineSetting/></span>
                             <span className="title">Settings</span>
                         </a>
                     </li>
-                    <li className={`navList ${isHoverList === 6 ? `hovered` : ``}`}>
+                    <li className={`navList ${isHoverList === 6 ? ` hovered` : ``}`}>
                         <a href="#">
                             <span className="icon"><BiLockAlt/></span>
                             <span className="title">Password</span>
                         </a>
                     </li>
-                    <li className={`navList ${isHoverList === 7 ? `hovered` : ``}`}>
+                    <li className={`navList${isHoverList === 7 ? ` hovered` : ``}`}>
                         <a href="#">
                             <span className="icon"><VscSignOut/></span>
                             <span className="title">Sign Out</span>
@@ -89,12 +89,8 @@ const Dashboard = () => {
                     </li>
                 </ul>
             </div>
-
-            <Main/>
+            <Main setToggle={setToggle}/>
         </div>
-
-
-
     )
 
 }

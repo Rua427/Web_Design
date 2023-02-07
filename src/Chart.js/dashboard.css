@@ -1,25 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wget@300;400;500;700&display=swap');
 
-*{
-    margin:0;
-    padding:0;;
-    box-sizing:border-box;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-:root{
-    --blue:#287bff;
-    --white:#fff;
-    --gray:#f5f5f5;
-    --black1:#222;
-    --black2:#999;
-
-}
-
-body{
-    min-height:100vh;
-    overflow-x:hidden;
-}
 .container
 {
     position:relative;
@@ -33,7 +13,7 @@ body{
     height:100%;
     background:var(--blue);
     border-left: 10px solid var(--blue);
-    transition:0.5s;
+    transition:0.33s;
     overflow:hidden;
 }
 
@@ -42,6 +22,10 @@ body{
     top:0;
     left:0;
     width:100%;
+}
+
+.navigation.active{
+    width:70px;
 }
 
 .navigation ul li{
