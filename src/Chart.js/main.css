@@ -4,8 +4,12 @@
     left:300px;
     min-height:100vh;
     background:var(--white);
-    transition:0.5s;
+    transition:0.33s;
 
+}
+.main.active{
+    width:calc(100% - 80px);
+    left:80px;
 }
 
 .topbar{
@@ -52,7 +56,7 @@
 .search label .searchIcon{
     position:absolute;
     top:0;
-    left:0px;
+    left:3%;
     font-size:1.2rem;
 }
 .user{
