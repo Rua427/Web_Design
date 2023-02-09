@@ -1,4 +1,5 @@
 import React from 'react'
+import Customer from './customer'
 import './data.css'
 const Data = () => {
   return (
@@ -82,6 +83,7 @@ const Data = () => {
             </table>
         </div>
         
+        <Customer/>
     </div>
   )
 }
