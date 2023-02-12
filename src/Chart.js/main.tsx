@@ -5,6 +5,7 @@ import {BiSearchAlt2 } from 'react-icons/bi'
 import './main.css'
 import Card from './card';
 import Data from './data';
+import Graph from './graph';
 
 interface Props{
     setToggle: Function;
@@ -35,6 +36,7 @@ const Main = (props: Props) => {
         </div>
 
         <Card/>
+        <Graph/>
         <Data/>
     </div>
   )
