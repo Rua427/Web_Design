@@ -11,6 +11,8 @@ import {
   import { Bar } from 'react-chartjs-2';
 import './graph.css'
 
+
+// react 렌더링시 필요
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -20,6 +22,7 @@ ChartJS.register(
     Legend
   );
   
+  // chart 옵션
   export const options = {
     responsive: true,
     plugins: {
@@ -32,6 +35,8 @@ ChartJS.register(
       },
     },
   };
+
+  // chart 데이터
 const data =  {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     datasets: [
